@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bases de Datos</title>
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine2/style.css" />
+<script type="text/javascript" src="engine2/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+<!--grupo CSS-->
+ <link rel="stylesheet" href="css/tema-app10.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+
+ <!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script  src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js" type="text/javascript"></script>
+<script src="phonegap.js"></script>
+
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onLoad="MM_preloadImages('imagenes/propiedades.jpg','imagenes/access_abrir1.png','imagenes/sqlServer.png','imagenes/sgbd.jpg','imagenes/relaciones2.gif','imagenes/sgbd2.jpg')">
+
+<!-- pagina principal-->
+ <div data-role="page" id="Principal" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>  Bases de Datos  </h1>
+ </div>
+ <div>
+<p align="center">Bienvenido al curso de Bases de Datos para comenzar pulse el botón del submodulo al cual quiere acceder</p> 
+ <!--boton colapsable -->
+ <div data-role="main" class="ui-content">
+ <div data-role="collapsible" data-content-theme="false">
+ <h1>¿Que es una Base de Datos (BD)?</h1>
+  <div>
+  <p>Una base de datos es un conjunto de datos pertenecientes a un mismo contexto y almacenados sistemáticamente para su posterior uso. En este sentido; una biblioteca puede considerarse una base de datos compuesta en su mayoría por documentos y textos impresos en papel e indexados para su consulta.</p>
+  <br>
+  <div>
+    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image59','','imagenes/access_abrir1.png',1)"><img src="imagenes/subtemabasesdedatos.jpg" width="400" height="400" id="Image59"></a> 
+    </div>
+  </div>
+    </div>
+   </div>
+
+   <div>
+    <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+    <li class=" ui-first-child ui-last-child">
+    <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+    <h2> Bases de datos </h2>
+    </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+     <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Bases de datos Avanzadas</h2>
+      </a>
+      </li>
+      </ul>
+      </div>
+      
+       <div data-role="main" class="ui-content">
+ <div data-role="collapsible" data-content-theme="false">
+ <h1>Datos del desarrollador</h1>
+  <div>
+  <p>Nombre del alumno:Eduardo Nolasco Perez</p>
+  <p>Grupo: "G"</p>
+  <p>Semestre: 4to</p>
+  <p>Submodulo: Desarrolla Aplicaciones Moviles</p>
+  <p>Nombre del docente: Jose Antonio Gomez</p>
+  <br>
+  </div>
+    </div>
+   </div>
+      </div>
+  <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+    <div>
+       <img src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <div>
+       <h4>Aplicacion Diez</h4>
+       <h4>Eduardo Nolasco Perez</h4>
+       </div>
+   </div>
+</div>
+      
+       <!-- pagina 1-->
+      <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Bases de Datos</h1>
+       </div>
+       <div data-role="content" align="center">
+       <div>
+       <p>Bienvenido al submodulo de Bases de Datos, A continuación, ponemos a tu disposición los siguientes temas para comprender más acerca de las Bases de datos</p>
+       
+       <!-- bases de datos -->
+       <div>
+    <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+    <li class=" ui-first-child ui-last-child">
+    <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+    <h2>Crear, abrir y cerrar una BD</h2>
+    <p></p>
+    </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+     <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Propiedades de los campos</h2>
+      <p> </p>
+      </a>
+      </li>
+       <li class="ui-first-child ui-last-child">
+      <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Relaciones en las BD</h2>
+      <p> </p>
+      </a>
+      </li>
+      <li class="ui-first-child ui-last-child">
+      <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2> Asistente de consultas</h2>
+      <p> </p>
+      </a>
+      </li>
+      </ul>
+      </div>
+      
+       </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+       
+           <!-- pagina 2-->   
+      <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Bases de Datos Avanzadas</h1>
+       </div>
+       <div data-role="content" align="center">
+       <div>
+       <p>Bienvenido al submodulo de Bases de Datos Avanzadas, A continuación, ponemos a tu disposición los siguientes temas para comprender más acerca de las Bases de datos Avanzadas</p>
+       <!--listas  DABDA-->
+      <div>
+       <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+    <li class=" ui-first-child ui-last-child">
+    <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+    <h2>Sistemas de gestión de bases de datos (SGBD)</h2>
+    <p></p>
+    </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+     <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Funcionamiento de un SGBD</h2>
+      <p> </p>
+      </a>
+      </li>
+      <li class="ui-first-child ui-last-child">
+       <a href="#Pagina9" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+       <h2>Instalación y configuración de un SGDB</h2>
+       <p> </p>
+       </a>
+       </li>
+      <li class="ui-first-child ui-last-child">
+      <a href="#Pagina10" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>  Operaciones avanzadas de consultas de datos en SQL </h2>
+      <p> </p>
+      </a>
+      </li>
+      </ul>
+      </div>
+       
+         </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+       
+        <!-- pagina 3-->
+       <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Crear y abrir una Base de Datos</h1>
+       </div>
+       <div data-role="content">
+       <div>
+       <h4>Una aplicación fácil de usar para comprender las bases de datos es access</h4>
+       <p></p>
+       <h3> Crear una bade de Datos en Access (en blanco)</h3>
+       <p>
+        <ul> 
+
+<li>Haga clic en la pestaña Archivo, en Nuevo y luego, en Base de datos en blanco.</li>
+
+<li>Escriba un nombre de archivo en el cuadro Nombre de archivo. Para cambiar la ubicación predeterminada del archivo, haga clic en Buscar una ubicación donde colocar la base de datos  Imagen del botón (junto al cuadro Nombre de archivo), vaya a la nueva ubicación y haga clic en Aceptar.</li>
+
+<li>Haga clic en Crear.</li>
+
+<li>Access crea la base de datos con una tabla vacía denominada Tabla1 y, luego, abre esa tabla en la vista Hoja de datos. El cursor se coloca en la primera celda vacía de la columna Haga clic para agregar.</li>
+
+<li>Comience a escribir para agregar datos o puede pegar datos de otro origen, tal y como se describe en la sección Copiar los datos de otro origen en una tabla de Access.</li></ul></p>
+
+<img src="imagenes/baseaccess1.png" width="50%" height="50%">
+
+      <h3>Abrir una base de datos en Access</h3>
+       <p>
+       <ul>
+<li>Si ya se está ejecutando Access, utilice el procedimiento siguiente para abrir la base de datos:</li>
+
+<li>Haga clic en el botón Microsoft Office  Imagen del botón de Office y, después, haga clic en Abrir.</li>
+
+<li>Haga clic en un acceso directo del cuadro de diálogo Abrir o en el cuadro Buscar en y, a continuación, haga clic en la unidad o carpeta que contenga la base de datos que desee.</li>
+
+<li>En la lista de carpetas, vaya a la carpeta que contiene la base de datos.</li>
+
+<li>Cuando encuentre la base de datos, siga uno de estos procedimientos:</li>
+
+<li>Haga doble clic en la base de datos para abrirla en el modo predeterminado especificado en el cuadro de diálogo Opciones de Access o en el modo establecido por una directiva administrativa.</li>
+
+<li>Haga clic en Abrir para abrir la base de datos para acceso compartido en un entorno de multiusuario, de manera que cualquier usuario pueda leer y escribir en la base de datos.</li>
+
+<li>Haga clic en la flecha situada junto al botón Abrir y, a continuación, en Abrir en modo sólo lectura para abrir la base de datos en acceso de sólo lectura y, de esta forma, poder verla pero no editarla. Otros usuarios pueden seguir leyendo y escribiendo en la base de datos.</li>
+
+<li>Haga clic en la flecha situada junto al botón Abrir y, a continuación, en Abrir en modo exclusivo para abrir la base de datos en acceso exclusivo. Cuando tiene una base de datos abierta en acceso exclusivo, cualquiera que intente abrir la base de datos recibe el mensaje "el archivo ya está en uso".</li>
+
+<li>Haga clic en la flecha situada junto al botón Abrir y, a continuación, en Abrir en modo exclusivo de sólo lectura para abrir la base de datos en acceso exclusivo. Otros usuarios pueden seguir abriendo la base de datos pero estarán limitados al modo de sólo lectura.</li></ul></P>
+<img src="imagenes/access_abrir1.png" width="50%" height="50%"> 
+
+
+ <div data-role="main" class="ui-content">
+ <div data-role="collapsible" data-content-theme="false">
+ <h1>Visor para crear una base de datos en access 2013</h1>
+  <div>
+   <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/1abrir_access.jpg" alt="1abrir_access" title="1abrir_access" id="wows1_0"/></li>
+		<li><img src="data1/images/2nombrar_base.jpg" alt="2nombrar_base" title="2nombrar_base" id="wows1_1"/></li>
+		<li><img src="data1/images/3pulsamos_ver.jpg" alt="3pulsamos_ver" title="3pulsamos_ver" id="wows1_2"/></li>
+		<li><img src="data1/images/4guardamos_nuestra_tabla.jpg" alt="4guardamos_nuestra_tabla" title="4guardamos_nuestra_tabla" id="wows1_3"/></li>
+		<li><img src="data1/images/5agregamos_campos.jpg" alt="5agregamos_campos" title="5agregamos_campos" id="wows1_4"/></li>
+		<li><img src="data1/images/6oprimimos_ver.jpg" alt="6oprimimos_ver" title="6oprimimos_ver" id="wows1_5"/></li>
+		<li><a href="http://wowslider.net"><img src="data1/images/7guardamos.jpg" alt="jquery slider" title="7guardamos" id="wows1_6"/></a></li>
+		<li><img src="data1/images/8listo.jpg" alt="8listo" title="8listo" id="wows1_7"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="1abrir_access"><span><img src="data1/tooltips/1abrir_access.jpg" alt="1abrir_access"/>1</span></a>
+		<a href="#" title="2nombrar_base"><span><img src="data1/tooltips/2nombrar_base.jpg" alt="2nombrar_base"/>2</span></a>
+		<a href="#" title="3pulsamos_ver"><span><img src="data1/tooltips/3pulsamos_ver.jpg" alt="3pulsamos_ver"/>3</span></a>
+		<a href="#" title="4guardamos_nuestra_tabla"><span><img src="data1/tooltips/4guardamos_nuestra_tabla.jpg" alt="4guardamos_nuestra_tabla"/>4</span></a>
+		<a href="#" title="5agregamos_campos"><span><img src="data1/tooltips/5agregamos_campos.jpg" alt="5agregamos_campos"/>5</span></a>
+		<a href="#" title="6oprimimos_ver"><span><img src="data1/tooltips/6oprimimos_ver.jpg" alt="6oprimimos_ver"/>6</span></a>
+		<a href="#" title="7guardamos"><span><img src="data1/tooltips/7guardamos.jpg" alt="7guardamos"/>7</span></a>
+		<a href="#" title="8listo"><span><img src="data1/tooltips/8listo.jpg" alt="8listo"/>8</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">bootstrap slider</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+  </div>
+    </div>
+   </div>
+   
+   
+  </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>   
+       <!-- pagina 4-->
+       <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Propiedades de los campos</h1>
+       </div>
+       <div data-role="content">
+       <div>
+       <P>
+       Cuando se aplica un tipo de datos a un campo, contiene un conjunto de propiedades que se pueden seleccionar por ejemplo: 
+ <ul>
+<li>Datos adjuntos: Imágenes adjuntas, archivos de hoja de cálculo, documentos, gráficos y otros tipos de archivos admitidos para los registros en la base de datos, similar a adjuntar archivos a los mensajes de correo.</li>
+
+<li>Autonumeración:  Un campo Autonumeración se usa para proporcionar un valor único que solamente sirve para hacer que cada registro sea único. </li>
+
+<li>Campo calculado: Los resultados de un cálculo. El cálculo debe referirse a otros campos en la misma tabla. Para crear el cálculo se usa el Generador de expresiones. Nota: Los campos calculados aparecieron por primera vez en Access 2010.</li>
+
+<li>Moneda: Valores monetarios.</li>
+
+<li>Fecha y hora: Valores de fecha y hora para los años 100 a 9999.</li>
+
+<li>Hipervínculo: Texto o combinaciones de texto y números que se almacenan como texto y se usan como una dirección de hipervínculo.</li>
+
+<li>Memo: Bloques extensos de texto. Un uso típico de un campo Memo sería una descripción detallada de un producto. Nota: Desde Access 2013, se ha cambiado el nombre de los tipos de datos Memo por Texto largo.</li>
+
+<li>Número: Valores numéricos, como distancias. Tenga en cuenta que hay un tipo de datos independiente para moneda.</li>
+
+<li>Objeto OLE: Se usa para adjuntar un objeto OLE, como una hoja de cálculo de Microsoft Office Excel, a un registro. Si quiere usar características de OLE, debe usar el tipo de datos Objeto OLE.</li>
+
+<li>Texto :Valores alfanuméricos cortos, como un apellido o una dirección. Nota: Desde Access 2013, se ha cambiado el nombre del tipo de datos Texto por Texto corto.</li>
+
+<li>Sí/No: Los valores y los campos Sí y No solo pueden contener uno de los dos valores.</li>
+</ul>
+       </P>
+         <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image57','','imagenes/propiedades.jpg',1)"><img src="imagenes/propiedades2.jpg" width="400" height="400" id="Image57"></a>
+       </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+        <!-- pagina 5-->
+        <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Relaciones en las Bases de Datos</h1>
+       </div>
+       <div data-role="content" align="center">
+       <div>
+       <P>
+       Una relación de tabla se representa mediante una línea de relación trazada entre las tablas en la ventana Relaciones. Una relación que no exige integridad referencial aparece como una línea delgada entre los campos comunes que admiten la relación. Si selecciona la relación haciendo clic en su línea, la línea se hará más gruesa para indicar que está seleccionada. Si exige la integridad referencial, la línea aparecerá más gruesa en los extremos. Además, aparece el número 1 sobre la parte gruesa de un extremo de la línea de relación y aparece el símbolo de infinito (∞) en la parte gruesa del otro extremo de la línea.
+       </P>
+       <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image66','','imagenes/relaciones2.gif',1)"><img src="imagenes/relaciones.png" width="400" height="400" id="Image66"></a> 
+    
+       </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+       
+        <!-- pagina 6-->
+        <div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Asistente de consultas</h1>
+       </div>
+       <div data-role="content" >
+       <div>
+       
+       <ul>
+       <P>Puede usar el Asistente para consultas para crear una consulta de selección automáticamente. Si utiliza el asistente, no podrá editar todos los detalles de diseño de la consulta. No obstante, el proceso de creación suele ser más rápido. Asimismo, el asistente puede detectar algunos errores de diseño básicos e indicarle que realice una acción diferente.</P>
+       <p>Si utiliza campos de orígenes de datos que no están relacionados entre sí, el Asistente para consultas le preguntará si desea crear relaciones. El asistente abrirá la Ventana Relaciones, pero tendrá que reiniciar el asistente si edita alguna relación. Por lo tanto, antes de ejecutar el asistente, considere crear las relaciones necesarias para su consulta.</p>
+       
+       Usar el Asistente para consultas
+       
+<li>En el grupo Consultas de la pestaña Crear, haga clic en Asistente para consultas. Si usa Access 2007, haga clic en Crear > Otros > Asistente para consultas.</li>
+
+<br><img src="imagenes/asistente1.png" width="35%" height="35%">
+
+<li>En el cuadro de diálogo Nueva consulta, haga clic en Asistente para consultas y en Aceptar.</li>
+
+<li>A continuación, agregue campos. Puede agregar hasta 255 campos de 32 tablas o consultas.</li>
+
+<li>Para cada campo, realice estos dos pasos:</li>
+
+<li>En Tablas/Consultas, haga clic en la tabla o consulta que contiene el campo.</li>
+
+<li>En Campos disponibles, haga doble clic en el campo para agregarlo a la lista de Campos seleccionados. Si desea agregar todos los campos a la consulta, haga clic en el botón con el corchete angular derecho doble (>>).</li>
+
+<li>Cuando haya agregado todos los campos que desee, haga clic en Siguiente.</li>
+
+<br><img src="imagenes/asistente2.png" width="50%" height="50%">
+
+<li>Si no ha agregado campos numéricos (campos que contienen datos numéricos), vaya al paso 9. Si ha agregado campos numéricos, el asistente le preguntará si desea que la consulta devuelva detalles o datos de resumen.</li>
+
+<li>Siga uno de estos pasos:</li>
+
+<li>Si desea ver registros individuales, haga clic en Detalles y, después, en Siguiente. Vaya al paso 9.</li>
+
+<li>Si desea ver datos numéricos resumidos, como promedios, haga clic en Resumen y, después, en Opciones de resumen.</li>
+
+<br><img src="imagenes/asistente3.png" width="50%" height="50%">
+
+<li>En el cuadro de diálogo Opciones de resumen, especifique los campos que desea resumir y cómo desea resumir los datos. Solo se muestran los campos numéricos.</li>
+
+Para cada campo numérico, elija una de las funciones siguientes:
+
+Sum    La consulta devuelve la suma de todos los valores del campo.
+
+Prom   La consulta devuelve el promedio de todos los valores del campo.
+
+Mín    La consulta devuelve el valor más bajo del campo.
+
+Máx    La consulta devuelve el valor más alto del campo.
+
+<br><img src="imagenes/asistente4.png" width="50%" height="50%">
+<li>Si desea que los resultados de la consulta incluyan un recuento de los registros de un origen de datos, seleccione la casilla Contar los registros de nombre de origen de datos adecuada.</li>
+
+<li>Haga clic en Aceptar para cerrar el cuadro de diálogo Opciones de resumen.</li>
+
+<li>Si no ha agregado un campo de Fecha y hora a la consulta, vaya al paso 9. Si ha agregado un campo de Fecha y hora a la consulta, el Asistente para consultas le preguntará cómo desea agrupar los valores de fechas. Por ejemplo, suponga que agrega a la consulta un campo numérico, como "Precio", y un campo de fecha y hora, como "Fecha de la transacción". A continuación, especifica en el cuadro de diálogo Opciones de resumen que desea ver el valor promedio del campo "Precio". Como ha incluido un campo de fecha y hora, puede calcular valores de resumen para cada valor único de fecha y hora, para cada día, mes, trimestre o año.</li>
+
+<br><img src="imagenes/asistente5.png" width="50%" height="50%">
+</ul>
+Seleccione el período de tiempo que desea utilizar para agrupar los valores de fecha y hora y, a continuación, haga clic en Siguiente.
+Nota: En la vista Diseño, puede usar una expresión para agrupar valores en función del período de tiempo que desee. No obstante, el asistente solo ofrece estas opciones.
+
+En la última página del asistente, agregue un título a la consulta, especifique si desea abrirla o modificarla y, a continuación, haga clic en Finalizar.
+       <p></p>
+       <div data-role="main" class="ui-content">
+ <div data-role="collapsible" data-content-theme="false">
+ <h1>Visor para crear una consulta sencilla en access 2013</h1>
+  <div>
+  <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container2">
+<div class="ws_images"><ul>
+		<li><img src="data2/images/1abrimos_base_de_datos.jpg" alt="1abrimos_base_de_datos" title="1abrimos_base_de_datos" id="wows2_0"/></li>
+		<li><img src="data2/images/2pulsamos_crear_diseo_consulta.jpg" alt="2pulsamos_crear_diseño_consulta" title="2pulsamos_crear_diseño_consulta" id="wows2_1"/></li>
+		<li><img src="data2/images/3agregamos_nuestra_tabla.jpg" alt="3agregamos_nuestra_tabla" title="3agregamos_nuestra_tabla" id="wows2_2"/></li>
+		<li><img src="data2/images/4seleccionamos_vista_sqljpg.jpg" alt="4seleccionamos_vista_sqljpg" title="4seleccionamos_vista_sqljpg" id="wows2_3"/></li>
+		<li><img src="data2/images/5ponemos_clausulas.jpg" alt="5ponemos_clausulas" title="5ponemos_clausulas" id="wows2_4"/></li>
+		<li><img src="data2/images/6pulsamos_ejecutar.jpg" alt="6pulsamos_ejecutar" title="6pulsamos_ejecutar" id="wows2_5"/></li>
+		<li><a href="http://wowslider.com/vi"><img src="data2/images/7nos_muestra_resultado.jpg" alt="cssslider" title="7nos_muestra_resultado" id="wows2_6"/></a></li>
+		<li><img src="data2/images/8rectificamos_y_listo.jpg" alt="8rectificamos_y_listo" title="8rectificamos_y_listo" id="wows2_7"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="1abrimos_base_de_datos"><span><img src="data2/tooltips/1abrimos_base_de_datos.jpg" alt="1abrimos_base_de_datos"/>1</span></a>
+		<a href="#" title="2pulsamos_crear_diseño_consulta"><span><img src="data2/tooltips/2pulsamos_crear_diseo_consulta.jpg" alt="2pulsamos_crear_diseño_consulta"/>2</span></a>
+		<a href="#" title="3agregamos_nuestra_tabla"><span><img src="data2/tooltips/3agregamos_nuestra_tabla.jpg" alt="3agregamos_nuestra_tabla"/>3</span></a>
+		<a href="#" title="4seleccionamos_vista_sqljpg"><span><img src="data2/tooltips/4seleccionamos_vista_sqljpg.jpg" alt="4seleccionamos_vista_sqljpg"/>4</span></a>
+		<a href="#" title="5ponemos_clausulas"><span><img src="data2/tooltips/5ponemos_clausulas.jpg" alt="5ponemos_clausulas"/>5</span></a>
+		<a href="#" title="6pulsamos_ejecutar"><span><img src="data2/tooltips/6pulsamos_ejecutar.jpg" alt="6pulsamos_ejecutar"/>6</span></a>
+		<a href="#" title="7nos_muestra_resultado"><span><img src="data2/tooltips/7nos_muestra_resultado.jpg" alt="7nos_muestra_resultado"/>7</span></a>
+		<a href="#" title="8rectificamos_y_listo"><span><img src="data2/tooltips/8rectificamos_y_listo.jpg" alt="8rectificamos_y_listo"/>8</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery carousel</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine2/wowslider.js"></script>
+<script type="text/javascript" src="engine2/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+  
+   </div>
+    </div>
+   </div>
+
+
+       </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+      
+        <!-- pagina 7-->
+              
+        <div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Sistemas Gestores de Bases de Datos</h1>
+       </div>
+       <div data-role="content" align="center">
+       <div>
+       <h3>MySQL</h3>
+<p>MySQL es un sistema gestor de bases de datos relacionales rápido, sólido y flexible. Es idóneo para la creación de bases de datos con acceso desde páginas web dinámicas, así como para la creación de cualquier otra solución que implique el almacenamiento de datos, posibilitando realizar múltiples y rápidas consultas. Está desarrollado en C y C++, facilitando su integración en otras aplicaciones desarrolladas también en esos lenguajes.
+
+Es un sistema cliente/servidor, por lo que permite trabajar como servidor multiusuario y de subprocesamiento múltiple, o sea, cada vez que se crea una conexión con el servidor, el programa servidor establece un proceso para manejar la solicitud del cliente, controlando así el acceso simultáneo de un gran número de usuarios a los datos y asegurando el acceso a usuarios autorizados solamente. Es uno de los sistemas gestores de bases de datos más utilizado en la actualidad, utilizado por grandes corporaciones como Yahoo! Finance, Google, Motorola, entre otras.</p>
+        <h3>Microsoft SQL Server</h3>
+        <p><img src="imagenes/mysql.jpg" width="50%" height="50%"></p>
+        <p>SQL Server es un sistema gestor de base de datos relacionales producido por Microsoft. Es un sistema cliente/servidor que funciona como una extensión natural del sistema operativo Windows. Entre otras características proporciona integridad de datos, optimización de consultas, control de concurrencia y backup y recuperación.
+
+Es relativamente fácil de administrar a través de la utilización de un entorno gráfico para casi todas las tareas de sistema y administración de bases de datos. Utiliza servicios del sistema operativo Windows para ofrecer nuevas capacidades o ampliar la base de datos, tales como enviar y recibir mensajes y gestionar la seguridad de la conexión. Es fácil de usar y proporciona funciones de almacenamiento de datos que sólo estaban disponibles en Oracle y otros sistemas gestores de bases de datos más caros.</p>
+       <p><img src="imagenes/sqlServer.png" width="50%" height="50%"></p>
+       <h3>Postgre SQL</h3>
+       <p>PostgreSQL es un Sistema Gestor de Bases de Datos Relacionales Orientadas a Objetos, derivado de Postgres, desarrollado en la Universidad de California, en el Departamento de Ciencias de la Computación de Berkeley. Es un gestor de bases de datos de código abierto, brinda un control de concurrencia multi-versión (MVCC por sus siglas en inglés) que permite trabajar con grandes volúmenes de datos; soporta gran parte de la sintaxis SQL y cuenta con un extenso grupo de enlaces con lenguajes de programación.
+
+Posee características significativas del motor de datos, entre las que se pueden incluir las subconsultas, los valores por defecto, las restricciones a valores en los campos (constraints) y los disparadores (triggers). Ofrece funcionalidades en línea con el estándar SQL92, incluyendo claves primarias, identificadores entrecomillados, conversión de tipos y entrada de enteros binarios y hexadecimales.
+
+El código fuente se encuentra disponible para todos sin costo alguno. Está disponible para 34 plataformas con la última versión estable.Es totalmente compatible con ACID (acrónimo de Atomicity, Consistency, Isolation and Durability; en español: Atomicidad, Consistencia, Aislamiento y Durabilidad).
+
+Posee una integridad referencial e interfaces nativas para lenguajes como ODBC, JDBC, C, C++, PHP, PERL, TCL, ECPG; PYTHON y RUBY. Funciona en todos los sistemas operativos Linux, UNIX (AIX, BSD, HP-UX, SGI IRIX, Mac OS X, Solaris, Tru64), y Windows.
+Debido a la liberación de la licencia, PostgreSQL se puede usar, modificar y distribuir de forma gratuita para cualquier fin, ya sea privado, comercial o académico. </p>
+<p><img src="imagenes/postgresql.png" width="50%" height="50%"></p>
+       
+       
+       </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+        <!-- pagina 8-->
+        <div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Funcionamiento de un SGBD</h1>
+       </div>
+       <div data-role="content" align="center">
+       <div>
+       
+       <P>Un Sistema Gestor de Base de Datos (SGBD, en inglés DBMS: DataBase Management System) es un sistema de software que permite la definición de bases de datos; así como la elección de las estructuras de datos necesarios para el almacenamiento y búsqueda de los datos, ya sea de forma interactiva o a través de un lenguaje de programación. Un SGBD relacional es un modelo de datos que facilita a los usuarios describir los datos que serán almacenados en la base de datos junto con un grupo de operaciones para manejar los datos.</P>
+       
+       <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image67','','imagenes/sgbd2.jpg',1)"><img src="imagenes/sgbd.jpg" width="960" height="720" id="Image67"></a> 
+      
+       </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+       
+        <!-- pagina 9-->
+        <div data-role="page" id="Pagina9" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Instalación y configuración de un SGDB</h1>
+       </div>
+       <div data-role="content" align="center">
+       <div>
+       <P> Visualia los siguientes videos para poder realizar una instalacion correcta y adecuada</P>
+       
+       <div data-role="main" class="ui-content" align="center">
+         <div style="width:40%">
+            <ul data-role="controlgroup" data-type="vertical" data-theme="a">
+            <li class="ui-first-child ui-last-child">
+        	<p>Video De Como Bajar, Instalar y Configurar UN SGBD(MYSQL)</p>
+           <a href="https://www.youtube.com/watch?v=XCb1dSIlPHo" data-role="button" target="_self">
+            <h2>Video</h2>
+            </a>
+            </li>
+            <li class="ui-first-child ui-last-child">
+            <p>Instalación de configuración de unh SGBD Firebird</p>
+           <a href="https://www.youtube.com/watch?v=QUYL8IBrnjg" data-role="button" target="_self">
+            <h2>Video</h2>
+            </a>
+            </li>
+            <li class="ui-first-child ui-last-child">
+            <p>Instalación y configuración de un Sistema Gestor de Base de Datos</p>
+           <a href="https://www.youtube.com/watch?v=nft2n50K80w" data-role="button" target="_self">
+            <h2>Video</h2>
+            </a>
+            </li>
+            </ul>
+            </div>
+            </div>
+         <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image65','','imagenes/sgbd.jpg',1)"><img src="imagenes/access.png" width="400" height="400" id="Image65"></a> 
+        
+       </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+       
+        <!-- pagina 10-->
+        <div data-role="page" id="Pagina10" data-add-back-btn="true" data-theme="a">
+       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+       <h1>Operaciones avanzadas de consultas de datos en SQL </h1>
+       </div>
+       <div data-role="content" align="center">
+       <div>
+       <P> Lista de videos para realizar operaciones avanzadas de consultas en SQL </P>
+    
+       <div data-role="main" class="ui-content" align="center">
+         <div style="width:40%">
+            <ul data-role="controlgroup" data-type="vertical" data-theme="a">
+            <li class="ui-first-child ui-last-child">
+            <p>Realizar calculos con consultas</p>
+           <a href="https://www.youtube.com/watch?v=zQWXurS6vlo" data-role="button" target="_self">
+            <h2>Video</h2>
+            </a>
+            </li>
+             <li class="ui-first-child ui-last-child">
+            <p>Ejemplo simple de SELECT utilizando operadores de comparación</p>
+           <a href="https://www.youtube.com/watch?v=eY91Gchuj9g" data-role="button" target="_self">
+            <h2>Video</h2>
+            </a>
+            </li>
+            <li class="ui-first-child ui-last-child">
+            <p>operaciones con base de datos</p>
+           <a href="https://www.youtube.com/watch?v=61zlkdnsorM" data-role="button" target="_self">
+            <h2>Video</h2>
+            </a>
+            </li>
+            </ul>
+            </div>
+            </div>
+         <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image58','','imagenes/sqlServer.png',1)"><img src="imagenes/mysql.jpg" width="400" height="400" id="Image58"></a>
+        
+       </div>
+       </div>
+       <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+       <div>
+       <img  src="res/android/mdpi.png" width="46" height="46">
+       </div>
+       <h4>Aplicación Diez,NPE</h4>
+       </div>
+       </div>
+  
+</body>
+</html>
+
+
